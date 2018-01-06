@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quicksort"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="250" Loaded="Window_Loaded">
+        Title="MainWindow" Height="430" Width="250" Loaded="Window_Loaded">
 
     <StackPanel>
-        <TextBlock TextAlignment="Center" FontWeight="Bold" Margin="14">QuickSort</TextBlock>
+        <TextBlock FontSize="24" TextAlignment="Center" FontWeight="Bold" Margin="14">QuickSort</TextBlock>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="200"/>
+                <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
-            <TextBlock Grid.Column="0" Grid.Row="0" Margin="10">Sortable List</TextBlock>
-            <TextBlock Grid.Column="1" Grid.Row="0" Margin="10">Sorted List</TextBlock>
-            <ListView x:Name="sortableList" Grid.Column="0" Grid.Row="1" Margin="10" Height="180"></ListView>
-            <ListView x:Name="sortedList"  Grid.Column="1" Grid.Row="1" Margin="10" Height="180"></ListView>
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="10 10 10 0">Sortable List</TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="0" Margin="10 10 10 0">Sorted List</TextBlock>
+            <ListView x:Name="sortableList" Grid.Column="0" Grid.Row="1" Margin="10 0 10 10" ></ListView>
+            <ListView x:Name="sortedList"  Grid.Column="1" Grid.Row="1" Margin="10 0 10 10" ></ListView>
         </Grid>
         <Button x:Name="btnSort" Content="Sort!" Margin="30" Click="btnSort_Click"></Button>
     </StackPanel>
