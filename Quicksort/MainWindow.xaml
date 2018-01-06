@@ -1,0 +1,28 @@
+﻿<Window x:Class="Quicksort.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quicksort"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="250">
+
+    <StackPanel>
+        <TextBlock TextAlignment="Center" FontWeight="Bold" Margin="14">QuickSort</TextBlock>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="10">Sortable List</TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="0" Margin="10">Sorted List</TextBlock>
+            <ListViewItem x:Name="sortableList" Grid.Column="0" Grid.Row="1" Margin="10" Height="180"></ListViewItem>
+            <ListViewItem x:Name="sortedList"  Grid.Column="1" Grid.Row="1" Margin="10" Height="180"></ListViewItem>
+        </Grid>
+        <Button x:Name="btnSort" Content="Sort!" Margin="30"></Button>
+    </StackPanel>
+</Window>
