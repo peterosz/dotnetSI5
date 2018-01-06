@@ -20,9 +20,16 @@
             </Grid.RowDefinitions>
             <TextBlock Grid.Column="0" Grid.Row="0" Margin="10 10 10 0">Sortable List</TextBlock>
             <TextBlock Grid.Column="1" Grid.Row="0" Margin="10 10 10 0">Sorted List</TextBlock>
-            <ListView x:Name="sortableList" Grid.Column="0" Grid.Row="1" Margin="10 0 10 10" ></ListView>
-            <ListView x:Name="sortedList"  Grid.Column="1" Grid.Row="1" Margin="10 0 10 10" ></ListView>
+            <ListView x:Name="sortableList" Grid.Column="0" Grid.Row="1" Margin="10 0 10 10" Height="204"></ListView>
+            <ListView x:Name="sortedList"  Grid.Column="1" Grid.Row="1" Margin="10 0 10 10" Height="204"></ListView>
         </Grid>
-        <Button x:Name="btnSort" Content="Sort!" Margin="30" Click="btnSort_Click"></Button>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnGenerate" Content="Generate" Margin="20" Grid.Column="0" Click="btnGenerate_Click"></Button>
+            <Button x:Name="btnSort" Content="Sort!" Margin="20" Grid.Column="1" Click="btnSort_Click"></Button>
+        </Grid>
     </StackPanel>
 </Window>

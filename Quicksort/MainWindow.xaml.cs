@@ -29,13 +29,20 @@ namespace Quicksort
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            sortableList.ItemsSource = numberSort.numsToSort;
         }
 
         private void btnSort_Click(object sender, RoutedEventArgs e)
         {
             numberSort.SortIt(numberSort.numsToSort);
+            sortedList.ItemsSource = null;
             sortedList.ItemsSource = numberSort.numsToSort;
+        }
+
+        private void btnGenerate_Click(object sender, RoutedEventArgs e)
+        {
+            numberSort.GenerateNums();
+            sortableList.ItemsSource = null;
+            sortableList.ItemsSource = numberSort.numsToSort;
         }
     }
 }

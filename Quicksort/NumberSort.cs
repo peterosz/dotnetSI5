@@ -12,6 +12,10 @@ namespace Quicksort
 
         public NumberSort()
         {
+        }
+
+        public void GenerateNums()
+        {
             Random random = new Random();
             for (int i = 0; i < numsToSort.Length; i++)
             {
