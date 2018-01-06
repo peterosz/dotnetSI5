@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quicksort"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="250">
+        Title="MainWindow" Height="400" Width="250" Loaded="Window_Loaded">
 
     <StackPanel>
         <TextBlock TextAlignment="Center" FontWeight="Bold" Margin="14">QuickSort</TextBlock>
@@ -20,9 +20,9 @@
             </Grid.RowDefinitions>
             <TextBlock Grid.Column="0" Grid.Row="0" Margin="10">Sortable List</TextBlock>
             <TextBlock Grid.Column="1" Grid.Row="0" Margin="10">Sorted List</TextBlock>
-            <ListViewItem x:Name="sortableList" Grid.Column="0" Grid.Row="1" Margin="10" Height="180"></ListViewItem>
-            <ListViewItem x:Name="sortedList"  Grid.Column="1" Grid.Row="1" Margin="10" Height="180"></ListViewItem>
+            <ListView x:Name="sortableList" Grid.Column="0" Grid.Row="1" Margin="10" Height="180"></ListView>
+            <ListView x:Name="sortedList"  Grid.Column="1" Grid.Row="1" Margin="10" Height="180"></ListView>
         </Grid>
-        <Button x:Name="btnSort" Content="Sort!" Margin="30"></Button>
+        <Button x:Name="btnSort" Content="Sort!" Margin="30" Click="btnSort_Click"></Button>
     </StackPanel>
 </Window>

@@ -20,9 +20,22 @@ namespace Quicksort
     /// </summary>
     public partial class MainWindow : Window
     {
+        NumberSort numberSort = new NumberSort();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            sortableList.ItemsSource = numberSort.numsToSort;
+        }
+
+        private void btnSort_Click(object sender, RoutedEventArgs e)
+        {
+            numberSort.SortIt(numberSort.numsToSort);
+            sortedList.ItemsSource = numberSort.numsToSort;
         }
     }
 }
